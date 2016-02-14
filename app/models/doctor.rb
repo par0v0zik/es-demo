@@ -12,4 +12,6 @@
 #
 
 class Doctor < ActiveRecord::Base
+  belongs_to :speciality, required: true
+  delegate :name, to: :speciality, prefix: true
 end
