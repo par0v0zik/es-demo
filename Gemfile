@@ -14,6 +14,8 @@ group :development, :test do
   gem 'annotate'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
+  gem 'faker'
+  gem 'factory_girl'
 end
 
 gem 'chewy'
