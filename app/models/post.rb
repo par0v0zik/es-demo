@@ -10,11 +10,9 @@
 #  updated_at :datetime         not null
 #  doctor_id  :integer
 #
-# Indexes
-#
-#  index_posts_on_doctor_id  (doctor_id)
-#
 
 class Post < ActiveRecord::Base
   belongs_to :doctor, required: true
+  
+  update_index 'main#doctor', :doctor, :urgent
 end
